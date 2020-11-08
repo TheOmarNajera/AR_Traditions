@@ -31,4 +31,4 @@ jobs:
       with:
         app-name: 'artraditions'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_373f2c6b98274f2c84186ecfe7081d2d }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_5d7aa6d1aa88437b980c118549e2b224 }}
