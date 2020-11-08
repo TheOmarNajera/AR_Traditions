@@ -4,7 +4,7 @@ from azure.cognitiveservices.vision.customvision.prediction import CustomVisionP
 from msrest.authentication import ApiKeyCredentials
 
 prediction_key = '19208769e9464095adc110aa4b6fcc99'
-ENDPOINT = 'https://southcentralus.api.cognitive.microsoft.com/customvision/v3.0/Prediction/e79751a3-4025-45d1-bc40-12d08eb8b930/classify/iterations/Iteration5/image'
+ENDPOINT = 'https://southcentralus.api.cognitive.microsoft.com/'
 project_id = 'e79751a3-4025-45d1-bc40-12d08eb8b930'
 publish_iteration_name = 'Iteration5'
 prediction_credentials = ApiKeyCredentials(in_headers={"Prediction-key": prediction_key})
@@ -33,12 +33,25 @@ def hola_mundo(request):
         response = requests.get(search_url, headers=headers, params=params)
         response.raise_for_status()
         search_results = response.json()
-        thumbnail_urls = [img["thumbnailUrl"] for img in search_results["value"][:30]]
+        thumbnail_urls = [img["thumbnailUrl"] for img in search_results["value"][:1]]
+        
+        
 
         n = thumbnail_urls
 
+        result = []
+        predictions = []
+
+        for i in n:
+            results = predictor.classify_image_url(project_id, publish_iteration_name, i)
+            for prediction in results.predictions:
+                predictions.append(prediction.tag_name + ": {0:.2f}%".format(prediction.probability * 100))
+            result.append(predictions)
+        print(result)
+
         return render(request,'hola.html',{
-            'Imagenes': n
+            'Imagenes': n,
+            'Datas' : result
         })
 
 
