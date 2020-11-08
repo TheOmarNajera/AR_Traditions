@@ -1,11 +1,14 @@
 from django.shortcuts import render, HttpResponse, redirect
 import requests
-"""
-import cgi
-print "Content-Type: text/html\n\n"
-my_form = cgi.FieldStorage()for name in my_form.keys():
-print "Input: " + name + " value: " + cgi.escape(my_form[name].value) + "<BR>"
-"""
+from azure.cognitiveservices.vision.customvision.prediction import CustomVisionPredictionClient
+from msrest.authentication import ApiKeyCredentials
+
+prediction_key = '19208769e9464095adc110aa4b6fcc99'
+ENDPOINT = 'https://southcentralus.api.cognitive.microsoft.com/customvision/v3.0/Prediction/e79751a3-4025-45d1-bc40-12d08eb8b930/classify/iterations/Iteration5/image'
+project_id = 'e79751a3-4025-45d1-bc40-12d08eb8b930'
+publish_iteration_name = 'Iteration5'
+prediction_credentials = ApiKeyCredentials(in_headers={"Prediction-key": prediction_key})
+predictor = CustomVisionPredictionClient(ENDPOINT, prediction_credentials)
 
 # Create your views here.7
 
@@ -41,3 +44,12 @@ def hola_mundo(request):
 
 def buscador(request):
     return render(request,'buscador.html')
+
+def predicciones(request):
+    try:
+        if request.method == 'POST':
+            title = request.POST['imagen1']
+            print(title)
+        return redirect('index')
+    except:
+        return HttpResponse("Hola mundo")

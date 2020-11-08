@@ -222,6 +222,13 @@
                 <br>
                 <input type="submit" value="Buscar" class="btn btn-primary">
             </form>
+            <iframe src='https://webchat.botframework.com/embed/chatboth-bot?s=PQiASR2TUaQ.XzwmVkwZtLHobFxW7DOYLsXEKLQFQUKzQ6IPKKsEEeo'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
+            
+            <form action="{% url 'predicciones' %}" name="subida-imagenes" method="POST" enctype="multipart/formdata" >
+                {% csrf_token %}
+                <input type="file" name="imagen1" />
+                <input type="submit" name="subir-imagen" value="Enviar imagen" />
+            </form>
         </div>
     </div>
     <footer class="container-fluid pt-5">
@@ -245,10 +252,10 @@
         </div>
     </footer>
     <script src="{% static 'js/popper.min.js' %}"></script>
-    <script src="{% static 'js/jquery-1.12.0.min.js'%}"></script>
+    <script src="{% static 'js/jquery-1.12.0.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static'js/owl.carousel.min.js %'}"></script>
-    <script src="{% static 'js/jquery.yu2fvl.js'%}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.yu2fvl.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
 </body>
 

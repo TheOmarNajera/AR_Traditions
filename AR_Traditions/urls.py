@@ -23,5 +23,6 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('ar_cam/', views.AR_Camera, name="AR_Camera"),
     path('hola/', views.hola_mundo, name="hola_mundo"),
-    path('buscador/', views.buscador, name="buscador")
+    path('buscador/', views.buscador, name="buscador"),
+    path('predicciones/', views.predicciones, name="predicciones")
 ]
