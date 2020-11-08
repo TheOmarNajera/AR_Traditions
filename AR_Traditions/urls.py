@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.config import settings
+from django.config.urls.static import static
 
 from AR_Camera import views
 
@@ -25,4 +27,4 @@ urlpatterns = [
     path('hola/', views.hola_mundo, name="hola_mundo"),
     path('buscador/', views.buscador, name="buscador"),
     path('predicciones/', views.predicciones, name="predicciones")
-]
+] +static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

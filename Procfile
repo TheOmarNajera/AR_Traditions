@@ -1,0 +1,1 @@
+web: gunicorn AR_Traditions.wsgi --log-file -
