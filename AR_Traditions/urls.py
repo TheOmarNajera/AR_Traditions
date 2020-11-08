@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.config import settings
+from django.conf import settings
 from django.config.urls.static import static
 
 from AR_Camera import views
