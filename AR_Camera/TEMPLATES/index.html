@@ -1,0 +1,255 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta content="" name="description" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/png" />
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-124562226-1"></script>
+    <title>AR TRADICTIONS</title>
+</head>
+
+<body>
+    <header class="mt-0 pt-0">
+        <div class="bg-cover clearfix pt-3" id="Inicio">
+            <h2 class="logo">DIA DE LOS MUERTOS</h2>
+            <input type="text" id="nav-search" class="nav-search mx-auto" name="" class="form-control">
+            <div class="ml-0 mr-0 pb-1">
+                <nav class="navbar navbar-expand-md">
+                    <button class="navbar-toggler ml-auto" data-target="#my-nav" data-toggle="collapse"
+                        aria-controls="my-nav" aria-expanded="false" onclick="myFunction(this)"
+                        aria-label="Toggle navigation">
+                        <span class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+        <div class="row ml-0 mr-0">
+            <div class="col-md-6 pr-0">
+                <div class="card">
+                    <img class="card-img" src="{% static 'images/left-img.jpg' %}" alt="">
+                    <div class="card-img-overlay d-flex align-items-center justify-content-center flex-column">
+                        <hr />
+                        <h2>Simulación de Objetos de un Altar de Muertos WEB</h2>
+                        <a href="{% url 'AR_Camera'%}" class="btn">Simular</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 pl-0">
+                <div class="card">
+                    <img class="card-img" src="{% static 'images/right-img.jpg' %}" alt="">
+                    <div class="card-img-overlay d-flex align-items-center justify-content-center flex-column">
+                        <hr />
+                        <h2>Descarga Nuestra Aplicación de Realidad Aumentada</h2>
+                        <a href="https://uanledu-my.sharepoint.com/:f:/g/personal/edgar_najeravz_uanl_edu_mx/EqcU_iqrfSNLhZILuegCISgBtKNMSnLaHP7rwpVKgsZbIQ?e=X9DbIT"
+                            class="btn">Descargar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pr-0 first">
+                <div class="card">
+                    <img class="card-img" src="{% static 'images/architecture.png' %}" alt="">
+                    <div class="card-img-overlay">
+                        <h5>PAN DE MUERTO</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pl-0 pr-0">
+                <div class="card">
+                    <img class="card-img" src="{% static 'images/interior.png'%}" alt="">
+                    <div class="card-img-overlay">
+                        <h5>FLORES</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pl-0 pr-0">
+                <div class="card">
+                    <img class="card-img" src="{% static 'images/food.png' %}" alt="">
+                    <div class="card-img-overlay">
+                        <h5>CALAVERITAS DE AZUCAR</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pl-0 last">
+                <div class="card">
+                    <img class="card-img" src="{% static 'images/travel.png' %}" alt="">
+                    <div class="card-img-overlay">
+                        <h5>FOTOS</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container-fluid video-player">
+        <div class="container">
+            <div class="screen embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XWxyQcJntKw" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="play-list">
+                <div class="owl-carousel owl-carousel4 owl-theme">
+                    <div>
+                        <div class="card"> <img class="card-img link-img"
+                                data-link="https://www.youtube.com/embed/ujPNSC4JllE"
+                                src="{% static 'images/play1.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card"> <img class="card-img link-img"
+                                data-link="https://www.youtube.com/embed/rMT8CffVFMk"
+                                src="{% static 'images/play2.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card"> <img class="card-img link-img"
+                                data-link="https://www.youtube.com/embed/bGC9f1Po6Q8"
+                                src="{% static 'images/play3.png'%}" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card"> <img class="card-img link-img"
+                                data-link="https://www.youtube.com/embed/yHk_sypSiXU"
+                                src="{% static 'images/play4.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card"> <img class="card-img link-img"
+                                data-link="https://www.youtube.com/embed/7yoqm-kgKEk"
+                                src="{% static 'images/play5.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row vr-gallery" id="historia">
+                <div class="col-md-8 mb-4">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-7 pr-0 pd-md">
+                            <img src="{% static 'images/gallery-img1.png' %}" alt="">
+                        </div>
+                        <div class="col-md-12 col-lg-5 light-bg cus-pd cus-arrow-left">
+                            <p><small>2017</small></p>
+                            <h3>COCO</h3>
+                            <p>
+                                Coco es una película animada de los estudios Disney, lanzada en el año 2017.
+                                Inspirada en una de la celebración tradicional mexicana conocida como Día de Muertos,
+                                la película se ha convertido rápidamente en una referencia cultural.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 pl-4 mb-4">
+                    <div class="card">
+                        <img class="card-img h-100" src="{% static 'images/video-cover1.jpg' %}" alt="">
+                        <div class="card-img-overlay opacity text-center">
+                            <a class="play-1" href="https://www.youtube.com/watch?v=PoKdWD2k4lY"><img
+                                    src="{% static 'images/play-icon.png' %}" alt=""></a>
+                            <h5 class="card-title">Recuerdame</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 mb-4 pr-0 pd-md">
+                    <div class="card">
+                        <img class="card-img h-100" src="{% static 'images/gallery-img2.jpg' %}" alt="">
+                        <div class="card-img-overlay">
+                            <div class="contact-box">
+                                <h3>Significado del Altar de Muertos</h3>
+                                <p>El altar de muertos es uno de los elementos fundamentales de la celebración del Día
+                                    de los Muertos en México.
+                                    Representa la visión que las culturas prehispánicas tenían de la muerte</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 pl-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'images/gallery-img3.jpg' %}" alt="">
+                        <div class="card-body bg-gray cus-pd2 cus-arrow-up">
+                            <h3>Retratos y objetos del difunto</h3>
+                            <p>Se puede poner lo que nuestros seres queridos usaban o estimaban.
+                                Si el alma es de un niño, es costumbre ponerles juguetes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 mb-4">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-7 pr-0 pd-md">
+                            <img src="{%static 'images/gallery-img4.jpg'%}" alt="">
+                        </div>
+                        <div class="col-md-12 col-lg-5 light-bg cus-pd cus-arrow-left">
+                            <h3>Niveles del altar de muertos</h3>
+                            <ul>
+                                <li>Primer piso: imagen del santo del que se es devoto.</li>
+                                <li>Segundo piso: imagen de las ánimas.</li>
+                                <li>Tercer piso: sal.</li>
+                                <li>Cuarto piso: imagen del personaje principal.</li>
+                                <li>Quinto piso: alimento preferido de los invitados del mundo de los muertos.</li>
+                                <li>Sexto piso: fotografía y retratos de los seres difuntos.</li>
+                                <li>Sétimo piso: cruz formada por semillas o frutas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 pl-4 mb-4">
+                    <div class="card">
+                        <img class="card-img h-100" src="{% static 'images/video-cover2.jpg' %}" alt="">
+                        <div class="card-img-overlay opacity text-center">
+                            <a class="play-1" href="https://www.youtube.com/watch?v=6ZV2_hHYjY0"><img
+                                    src="{% static 'images/play-icon.png' %}" alt=""></a>
+                            <h5 class="card-title">Niveles del Altar de Muertos</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 style="text-align: center;"> <strong>Buscador de Imágenes</strong> <i>Powered By BING</i></h4>
+            <br>
+            <form action="{% url 'hola_mundo' %}" method="POST"
+                class="d-flex align-items-center justify-content-center">
+                <br>
+                {% csrf_token %}
+                <input type="text" name="title" placeholder="¿Qué quieres buscar?" style="text-align: center;">
+                <br>
+                <input type="submit" value="Buscar" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+    <footer class="container-fluid pt-5">
+        <div class="container">
+            <h2 class="logo text-center">AR TRDICTIONS</h2>
+            <nav class="nav nav-fill mx-auto mt-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/alanrobertho.deleon" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/alan.roberto17/?hl=es-la"><i
+                            class="fab fa-instagram"></i></a>
+                </li>
+            </nav>
+        </div>
+        <div class="copyright mt-4">
+            <p class="text-center">&copy; 2020 <a href="#" class="text-white">AR Tradictions</a>. Desarrollado
+                by <a href="https://www.facebook.com/alanrobertho.deleon" target="_blank" class="text-white">Alan</a>.
+            </p>
+        </div>
+    </footer>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/jquery-1.12.0.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static'js/owl.carousel.min.js %'}"></script>
+    <script src="{% static 'js/jquery.yu2fvl.js'%}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
